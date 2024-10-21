@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberWarriors - Contact Us</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #1a0505;
+            color: #ffe0e0;
+        }
+        .subtle-neon-text {
+            text-shadow: 0 0 2px #ff0000, 0 0 5px #ff0000;
+        }
+        .subtle-neon-border {
+            box-shadow: 0 0 3px #ff00ff, 0 0 6px #ff00ff;
+        }
+        .cyber-input {
+            background: rgba(48, 16, 16, 0.8);
+            border: 2px solid #ff0000;
+            color: #ffe0e0;
+            transition: all 0.3s ease;
+        }
+        .cyber-input:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+        .cyber-button {
+            background: #ff0000;
+            color: #1a0505;
+            transition: all 0.3s ease;
+        }
+        .cyber-button:hover {
+            background: #ff00ff;
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+        .glitch-effect {
+            position: relative;
+        }
+        .glitch-effect::before,
+        .glitch-effect::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch-effect::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00de;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+        .glitch-effect::after {
+            left: -2px;
+            text-shadow: -2px 0 #00fff9;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(69px, 9999px, 44px, 0); }
+            100% { clip: rect(33px, 9999px, 128px, 0); }
+        }
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(11px, 9999px, 92px, 0); }
+            100% { clip: rect(54px, 9999px, 17px, 0); }
+        }
+    </style>
+</head>
+<center>
+<body class="bg-gradient-to-b from-red-900 to-black min-h-screen">
+    <header class="bg-black bg-opacity-80 text-red-400 p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold subtle-neon-text glitch-effect" data-text="CyberWarriors">CyberWarriors</h1>
+            <nav class="flex space-x-6 ml-auto">
+                <a href="commercial.html" class="hover:text-pink-500 transition duration-300">Home</a>
+                <a href="service.html" class="hover:text-pink-500 transition duration-300">Services</a>
+                <a href="about.html" class="hover:text-pink-500 transition duration-300">About Us</a>
+                <a href="contact.html" class="hover:text-pink-500 transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-16 p-4">
+        <section class="bg-black bg-opacity-70 rounded-lg shadow-lg p-8 mb-16 subtle-neon-border">
+            <h2 class="text-4xl font-bold mb-4 subtle-neon-text">Contact the Cyber Guardians</h2>
+            <p class="text-xl text-red-300 mb-8">Ready to fortify your digital defenses? Reach out to our elite team of cyber warriors. We're standing by to secure your digital frontier.</p>
+            
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-red-400 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required class="cyber-input w-full p-3 rounded-lg" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-red-400 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required class="cyber-input w-full p-3 rounded-lg" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-red-400 mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" required class="cyber-input w-full p-3 rounded-lg" placeholder="Enter the subject">
+                </div>
+                <div>
+                    <label for="message" class="block text-red-400 mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" required class="cyber-input w-full p-3 rounded-lg" placeholder="Enter your message"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="cyber-button font-bold py-3 px-6 rounded-lg text-lg">Send Transmission</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="bg-black bg-opacity-70 rounded-lg shadow-lg p-8 mb-16 subtle-neon-border">
+            <h3 class="text-3xl font-bold mb-4 subtle-neon-text">Alternative Comm Channels</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="text-2xl font-bold mb-2 text-pink-500">Secure Hotline</h4>
+                    <p class="text-red-300">WILL BE AVAILABLE SOON </p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-2 text-pink-500">Encrypted Email</h4>
+                    <p class="text-red-300">secure@cyberwarriors.com</p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-2 text-pink-500">Physical Nexus</h4>
+                    <p class="text-red-300">WITHIN FIREWALLS OF INTERNET</p>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-2 text-pink-500">Satellite Uplink</h4>
+                    <p class="text-red-300"> MEMBERS ONLY</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black bg-opacity-80 text-red-400 mt-auto p-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 CyberWarriors. Guardians of the Digital Realm.</p>
+            <p class="mt-2">Quantum-secured • AI-enhanced • Nanotech-powered</p>
+        </div>
+    </footer>
+</center>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const headers = document.querySelectorAll('h1, h2, h3, h4');
+            headers.forEach(header => {
+                header.addEventListener('mouseover', () => {
+                    header.style.transform = 'scale(1.05) skew(-5deg)';
+                    header.style.transition = 'transform 0.3s ease';
+                });
+                header.addEventListener('mouseout', () => {
+                    header.style.transform = 'scale(1) skew(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

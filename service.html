@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberWarriors - Our Services</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0a192f;
+            color: #e6f1ff;
+        }
+        .subtle-neon-text {
+            text-shadow: 0 0 2px #64ffda, 0 0 5px #64ffda;
+        }
+        .subtle-neon-border {
+            box-shadow: 0 0 3px #64ffda, 0 0 6px #64ffda;
+        }
+        .cyber-card {
+            background: rgba(17, 34, 64, 0.8);
+            border: 2px solid #64ffda;
+            transition: all 0.3s ease;
+        }
+        .cyber-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+        .glitch-effect {
+            position: relative;
+        }
+        .glitch-effect::before,
+        .glitch-effect::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch-effect::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00de;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+        .glitch-effect::after {
+            left: -2px;
+            text-shadow: -2px 0 #00fff9;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(69px, 9999px, 44px, 0); }
+            100% { clip: rect(33px, 9999px, 128px, 0); }
+        }
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(11px, 9999px, 92px, 0); }
+            100% { clip: rect(54px, 9999px, 17px, 0); }
+        }
+    </style>
+</head>
+<center>
+<body class="bg-gradient-to-b from-blue-900 to-gray-900 min-h-screen">
+    <header class="bg-gray-900 bg-opacity-80 text-cyan-400 p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold subtle-neon-text glitch-effect" data-text="CyberWarriors">CyberWarriors</h1>
+            <nav class="flex space-x-6 ml-auto">
+                <a href="#" class="hover:text-teal-300 transition duration-300">Home</a>
+                <a href="#" class="hover:text-teal-300 transition duration-300">Services</a>
+                <a href="#" class="hover:text-teal-300 transition duration-300">About Us</a>
+                <a href="#" class="hover:text-teal-300 transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-16 p-4">
+        <section class="bg-gray-800 bg-opacity-70 rounded-lg shadow-lg p-8 mb-16 subtle-neon-border">
+            <h2 class="text-4xl font-bold mb-4 subtle-neon-text">Our Cybersecurity Services</h2>
+            <p class="text-xl text-cyan-200 mb-8">CyberWarriors offers a comprehensive suite of cutting-edge cybersecurity solutions designed to protect your digital assets and fortify your defenses against evolving threats.</p>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="cyber-card rounded-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-teal-300">Quantum Encryption</h3>
+                <p class="text-cyan-100">Utilize the power of quantum mechanics to create unbreakable encryption for your most sensitive data, ensuring absolute security in transit and at rest.</p>
+            </div>
+            <div class="cyber-card rounded-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-teal-300">AI-Powered Threat Detection</h3>
+                <p class="text-cyan-100">Our advanced AI systems continuously monitor your network, identifying and neutralizing threats in real-time with unparalleled accuracy and speed.</p>
+            </div>
+            <div class="cyber-card rounded-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-teal-300">Neural Firewalls</h3>
+                <p class="text-cyan-100">Next-gen adaptive firewalls that learn and evolve to counter new cyber threats, providing dynamic protection for your network perimeter.</p>
+            </div>
+            <div class="cyber-card rounded-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-teal-300">Holographic Security Interfaces</h3>
+                <p class="text-cyan-100">Immersive 3D visualizations of your network security, allowing for intuitive monitoring and rapid response to emerging threats.</p>
+            </div>
+        </section>
+
+        <section class="bg-gray-800 bg-opacity-70 rounded-lg shadow-lg p-8 mb-16 subtle-neon-border">
+            <h3 class="text-3xl font-bold mb-4 subtle-neon-text">Additional Services</h3>
+            <ul class="list-disc list-inside text-cyan-100 space-y-4">
+                <li><span class="text-teal-300 font-bold">Cybersecurity Consultancy:</span> Expert guidance on building robust security architectures</li>
+                <li><span class="text-teal-300 font-bold">Penetration Testing:</span> Ethical hacking to identify vulnerabilities in your systems</li>
+                <li><span class="text-teal-300 font-bold">Incident Response:</span> Rapid deployment of our elite cyber response team in case of breaches</li>
+                <li><span class="text-teal-300 font-bold">Security Awareness Training:</span> Equip your team with the knowledge to recognize and prevent cyber threats</li>
+                <li><span class="text-teal-300 font-bold">Compliance and Risk Management:</span> Ensure your cybersecurity measures meet industry standards and regulations</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 bg-opacity-80 text-cyan-400 mt-auto p-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 CyberWarriors. Guardians of the Digital Realm.</p>
+            <p class="mt-2">Quantum-secured • AI-enhanced • Nanotech-powered</p>
+        </div>
+    </footer>
+</center>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const headers = document.querySelectorAll('h1, h2, h3, h4');
+            headers.forEach(header => {
+                header.addEventListener('mouseover', () => {
+                    header.style.transform = 'scale(1.05) skew(-5deg)';
+                    header.style.transition = 'transform 0.3s ease';
+                });
+                header.addEventListener('mouseout', () => {
+                    header.style.transform = 'scale(1) skew(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
